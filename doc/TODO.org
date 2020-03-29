@@ -1,0 +1,5 @@
+* Todos
+** Add a `dev` or `user` namespace
+*** Probably `dev`
+** Add dependency on `clojure.tools.namespace`
+** Add a do-it-yourself script of things to try
