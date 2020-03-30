@@ -19,7 +19,18 @@
 ;;;; - I've never seen this problem before.
 ;;;;   Might it be related to jenv? (Just a guess.)
 
+
+
+;;;; All OK on Sheringham.
+;;;; THIS IS WEIRD. TRY A REBOOT TO SEE IF THE PROBLEM GOES AWAY
+
+
+
+#_
 (let [dirs-on-classpath (filter #(.isDirectory ^File %)
                                 (classpath/system-classpath))]
   (apply tnr/set-refresh-dirs
          dirs-on-classpath))
+
+(filter #(.isDirectory ^File %)
+        (classpath/classpath (clojure.lang.RT/baseLoader)))
